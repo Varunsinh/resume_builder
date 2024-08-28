@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply bg-[#f0f0f0] scroll-smooth
+}
+
+
+@layer components {
+  :root {
+    --color: rgba(137, 16, 241, 1);
+    ;
+  }
+  .detail {
+    @apply flex flex-col gap-4;
+  }
+  .row {
+    @apply flex gap-x-5 p-2;
+  }
+  .column {
+    @apply flex flex-col gap-2;
+  }
+  .row > div {
+    @apply flex-1;
+  }
+  .label {
+    @apply font-medium text-lg;
+  }
+ 
+  .header::-webkit-scrollbar {
+    height: 7px;
+  }
+  .header::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #c7c7c7;
+  }
+  .link {
+    @apply text-sm flex items-center gap-1 cursor-pointer text-dynamic-color
+  }
+  .link-svg {
+    @apply text-dynamic-color h-4 w-4;
+  }
+  .content {
+    @apply flex flex-wrap gap-2 py-2 px-0;
+  }
+  .title{
+    @apply font-medium text-lg 
+  }
+  .subtitle{
+    @apply font-bold  text-base
+  }
+  .section-title{
+    @apply text-2xl font-bold w-full border-b-[2px] border-b-black
+  }
+  .item {
+    @apply border-b-[1px] border-dotted border-b-[lightgray] flex flex-col gap-1 pb-2
+  }
+  .item:last-child {
+   @apply border-none
+  }
+  .overview{
+    @apply text-sm
+  }
+  .date{
+    @apply flex gap-1 items-center text-sm
+  }
+  .date-svg{
+    @apply w-3 h-3
+  }
+  .numbered{
+    @apply pl-4 text-sm
+  }
+  .hidden {
+    display: none;
+  }
+  /* .saved{
+    @apply bg-[#8910f1] text-white
+  } */
+}
